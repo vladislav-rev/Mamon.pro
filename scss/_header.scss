@@ -1,0 +1,81 @@
+//Переменные $backblack: ;//
+$widtHeight: 58px;
+$colorHeader:#202020;
+
+/*Для ссылок и не только..
+
+@mixin foncol($f, $c) {
+	font-size: $f;
+	color: $c;
+} */
+%tpl-Header {
+	width: 100%;
+	max-width: 1212px;
+	margin: 0px auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 53px 15px 0px 15px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.header {
+	@extend %tpl-Header;
+
+
+	@media (max-width: 1212px) {
+		width: 970px;
+	}
+
+	@media (max-width: 992px) {
+		width: 750px;
+	}
+
+	@media (max-width: 767px) {
+		width: none;
+	}
+
+	a.logo {
+		display: flex;
+		align-items: center;
+		color: $colorHeader;
+
+		.logo-img {
+			display: block;
+			width: $widtHeight;
+			height: $widtHeight;
+			background-image: url(../img/icon/logo.svg);
+			margin: 0px 25px 0px 0px;
+		}
+
+		.logo-text {
+			font-size: 24px;
+			margin: 0px 0px 10px 0px;
+		}
+	}
+}
+
+.nav {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	list-style-type: none;
+	font-size: 14px;
+
+	>li {
+		margin: 0px 0px 0px 35px;
+
+		a {
+			color: $colorHeader;
+		}
+
+		.nav_btn {
+			background: #5528FF;
+			border-radius: 5px;
+			color: #FFFFFF;
+			padding: 2.5px 13px 4.5px 14px;
+			font-weight: 700;
+		}
+	}
+}

@@ -1,0 +1,16 @@
+@import "_nullstyle";
+@import "_header";
+@import "_main";
+@import "_footer";
+
+
+//Для ссылок и не только..
+@mixin foncol($f, $c) {
+	font-size: $f;
+	color: $c;
+}
+
+body {
+	font-family: 'Ubuntu', sans-serif;
+	background: #FFFFFF;
+}

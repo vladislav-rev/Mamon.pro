@@ -1,0 +1,139 @@
+@mixin foncolpad($f, $c, $p) {
+	font-size: $f;
+	color: $c;
+	padding: $p;
+}
+
+.page {
+	padding: 85px 0px 109px 0px;
+
+	.page-top {
+		border-top: 1px solid #C2C2C2;
+	}
+}
+
+
+.wrap {
+	width: 100%;
+	max-width: 1212px;
+	margin: 0px auto;
+	padding: 0px 15px 0px 15px;
+	position: relative;
+
+	@media (max-width: 1212px) {
+		width: 970px;
+		height: 100%;
+	}
+
+	@media (max-width: 992px) {
+		width: 750px;
+		height: 100%;
+	}
+
+	@media (max-width: 767px) {
+		width: none;
+	}
+}
+
+.button {
+	background: #5528FF;
+	border-radius: 10px;
+	border: none;
+	@include foncolpad(24px, #ffffff, 16px 59px);
+}
+
+h2 {
+	position: absolute;
+	top: -100px;
+	font-weight: 300;
+	background-color: #fff;
+	@include foncolpad(14px, #c2c2c2, 15px 15px)
+}
+
+.title-main {
+	font-family: Ubuntu;
+	font-weight: 700;
+	font-size: 60px;
+	color: #202020;
+	letter-spacing: 0.8px;
+	margin: 40px 0px 0px 0px;
+}
+
+.text-main {
+	line-height: 1.5;
+	max-width: 746px;
+	@include foncolpad(34px, #4f4f4f, 20px 65px 0px);
+}
+
+.services {
+	display: grid;
+	grid-template: repeat(2, 1fr) / 55% 55%;
+	grid-row-gap: 100px;
+
+	.services-item {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+
+		&__img {
+			flex-basis: 165px;
+			text-align: center;
+		}
+
+		&__text {
+			flex-basis: calc(80% - 165px);
+		}
+	}
+
+	h3 {
+		font-size: 28px;
+		font-weight: 400;
+		color: #000000;
+		margin: 0px 0px 17px 0px;
+	}
+
+	p {
+		font-size: 14px;
+		line-height: 1.5;
+		color: #B2B2B2;
+	}
+}
+
+.clients {
+	display: grid;
+	grid-template: repeat(2, 1fr) / repeat(4, 25%);
+	text-align: center;
+	grid-row-gap: 44px;
+	padding: 0px 0px 0px 0px;
+}
+
+.team {
+	display: grid;
+	grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+	grid-row-gap: 51px;
+
+	.team-item {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+
+		img {
+			margin: 0px 35px 0px 0px;
+		}
+
+		&__info {
+			flex-basis: calc(100%-120px);
+
+			h3 {
+				margin: 7px 0px 0px 0px;
+				@include foncolpad(28px, #202020, 20px 0px 0px 0px);
+			}
+
+			p {
+				font-size: 14px;
+				color: #B2B2B2;
+			}
+		}
+
+	}
+}
